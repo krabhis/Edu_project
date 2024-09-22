@@ -35,10 +35,6 @@ function Login() {
             return;
         }
 
-        
-       
-  
-
         // dispatch create account action
         const response = await dispatch(login(loginData));
         console.log(response)
@@ -58,17 +54,7 @@ function Login() {
             <div className='flex overflow-x-auto items-center justify-center h-[100vh]'>
                 <form noValidate onSubmit={onLogin} className='flex flex-col justify-center gap-3 rounded-lg p-4 text-white w-96 shadow-[0_0_10px_black]'>
                     <h1 className="text-center text-2xl font-bold">Login Page</h1>
-
-                    
-                    <input 
-                        onChange={getImage}
-                        className="hidden"
-                        type="file"
-                        name="image_uploads"
-                        id="image_uploads"
-                        accept=".jpg, .jpeg, .png, .svg"
-                    />
-                   
+    
                     <div className='flex flex-col gap-1'>
                         <label htmlFor="email" className='font-semibold'> Email </label>
                         <input 
@@ -110,4 +96,4 @@ function Login() {
     );
 }
 
-export default Signup;
+export default Login;
