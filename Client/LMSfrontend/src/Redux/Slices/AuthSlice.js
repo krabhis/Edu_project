@@ -8,7 +8,7 @@ const initialState = {
     data: localStorage.getItem('data') != undefined ? JSON.parse(localStorage.getItem('data')) : {}
 };
 
-export const createAccount = createAsyncThunk("/auth/signup", async (data) => {
+export const createAccount = createAsyncThunk("/auth/signup", async (data) =>{
     try {
         const res = axiosInstance.post("/user/register", data);
         toast.promise(res, {
@@ -53,7 +53,8 @@ export const logout = createAsyncThunk("/auth/logout", async () => {
             error: "Failed to log out"
         });
         return (await res).data;
-    } catch(error) {
+    }
+     catch(error) {
         toast.error(error?.response?.data?.message);
     }
 });

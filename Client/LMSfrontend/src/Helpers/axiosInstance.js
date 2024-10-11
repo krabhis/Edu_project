@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL="https://localhost:7000/api/v1";
+const BASE_URL="http://localhost:3001/api/v1";//url of backened (api endpoint)
 
 const axiosInstance= axios.create();
 
