@@ -71,31 +71,22 @@ export const login = createAsyncThunk("/auth/signin", async (data) => {
 })
 
 export const logout = createAsyncThunk("/auth/logout", async () => {
-    try {
-        // Sending the logout request
-        const response = await axiosInstance.post("user/logout");
-        console.log(data);
-        toast.promise(
-            response, // The promise itself
-            {
-                loading: 'Wait! Logging out your account...',
-                success: (data) => {
-                    return data?.data?.message || 'Logged out successfully!';
-                },
-                error: (err) => {
-                    // Handle error in case of failure, either from server or network issue
-                    return err?.response?.data?.message || 'Failed to log out your account';
-                },
-            }
-        );
-
-        // Return the response data, which will be passed to the Redux store
-        return response.data;
-    } catch (error) {
-        console.log(error);
-
-        toast.error(error?.response?.data?.message || 'An unexpected error occurred');
-    }
+try {
+    const response = axiosInstance.post("user/logout");
+    toast.promise(response, {
+        loading: 'Wait! logging out',
+        success: (data) => {
+            return data?.data?.message;
+        },
+        error: 'Failed to logout'
+    });
+    return await response;
+    
+} catch (error) {
+    toast.error(error?.response?.data?.message);
+    
+}
+   
 });
 
 
