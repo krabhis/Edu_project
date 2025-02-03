@@ -15,6 +15,7 @@ import Denied from './Pages/Denied';
 import CreateCourse from './Pages/Course/CreateCourse';
 import RequireAuth from './Components/Auth/RequireAuth';
 import Profile from './Pages/User/Profile';
+import EditProfile from './Pages/User/EditPofile';
 
 
 function App() {
@@ -39,6 +40,8 @@ function App() {
 
     <Route element={<RequireAuth allowedRoles={["ADMIN","USER"]} />}>
     <Route path='/user/profile' element={<Profile />} />
+    <Route path='/user/editprofile' element={<EditProfile/>} />
+
     </Route>
 
     {/* Catch-all 404 route */}
