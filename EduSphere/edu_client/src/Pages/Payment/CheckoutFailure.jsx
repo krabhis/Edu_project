@@ -24,8 +24,8 @@ function CheckoutFailure() {
                     </div>
 
                     <RxCrossCircled className="text-5xl text-red-500 mt-2" />
-                    <Link to="/" className="bg-red-500 hover:bg-red-600 transition-all ease-in-out duration-300 absolute bottom-0 w-full py-2 text-center rounded-br-lg rounded-bl-lg">
-                        <button>Go to dashboard</button>
+                    <Link to="/checkout" className="bg-red-500 hover:bg-red-600 transition-all ease-in-out duration-300 absolute bottom-0 w-full py-2 text-center rounded-br-lg rounded-bl-lg">
+                        <button>Try Again</button>
                     
                     </Link>
                 </div>

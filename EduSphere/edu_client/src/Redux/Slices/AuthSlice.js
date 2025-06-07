@@ -5,7 +5,7 @@ import axiosInstance from "../../Helpers/axiosInstance"
 const initialState = {
     isLoggedIn: localStorage.getItem("isLoggedIn") || false,
     role: localStorage.getItem("role") || "",
-    data: JSON.parse(localStorage.getItem("data")) || {}
+    data: JSON.parse(localStorage.getItem("data")) || {} 
 }
 
 export const createAccount = createAsyncThunk("/auth/signup", async (data) => {
@@ -71,7 +71,7 @@ export const login = createAsyncThunk("/auth/signin", async (data) => {
 
 export const logout = createAsyncThunk("/auth/logout", async () => {
 try {
-    const response = axiosInstance.post("user/logout");
+    const response = axiosInstance.get("user/logout");
     toast.promise(response, {
         loading: 'Wait! logging out',
         success: (data) => {

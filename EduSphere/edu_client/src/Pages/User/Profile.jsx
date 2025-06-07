@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import HomeLayout from "../../Layouts/HomeLayout";
 import { getUserData } from "../../Redux/Slices/AuthSlice";
-// import { cancelCourseBundle } from "../../Redux/Slices/razorPaySlice";
+import { cancelCourseBundle } from "../../Redux/Slices/RazorpaySlice";
 function Profile() {
 
     const dispatch = useDispatch();
