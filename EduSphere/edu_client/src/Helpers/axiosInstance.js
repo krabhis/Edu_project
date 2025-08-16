@@ -1,6 +1,9 @@
 import axios from "axios";
 
-const BASE_URL="http://localhost:3002/api/v1";//url of backened (api endpoint)
+// const BASE_URL="http://localhost:3002/api/v1";//url of backened (api endpoint)  for developemt only
+
+const BASE_URL = "https://lms-server-ngh3.onrender.com/api/v1";
+
 
 const axiosInstance= axios.create();
 
