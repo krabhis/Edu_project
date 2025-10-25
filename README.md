@@ -1,4 +1,4 @@
-# 📚 Learning Management System (LMS)
+# 📚Virtual Learning Plateform 
 
 This repository implements a **comprehensive Learning Management System (LMS)** built with the **MERN stack (MongoDB, Express.js, React, Node.js)**.  
 The platform delivers a seamless online learning experience for **students** and **instructors**, along with a powerful **admin dashboard** for management.  
